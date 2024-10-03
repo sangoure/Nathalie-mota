@@ -1,0 +1,16 @@
+// Définition d'un mixin pour l'animation openNav
+@mixin openNavAnimation {
+  // Définition des keyframes pour l'animation openNav
+  @keyframes openNav {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  // Application de l'animation openNav
+  animation: openNav 0.7s ease-in-out 0s forwards;
+}

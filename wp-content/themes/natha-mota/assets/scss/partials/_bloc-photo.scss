@@ -1,0 +1,152 @@
+/* Styles pour la section des photos similaires */
+.PhotoSimilaire {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styles pour chaque bloc de photo relative */
+.blockPhotoRelative {
+  flex-shrink: 0;
+  position: relative;
+  width: 564px;
+  height: 495px;
+  margin-bottom: 50px;
+
+  /* Ajustements responsives */
+  @media screen and (min-width: 765px) and (max-width: 1140px) {
+    width: 370px;
+  }
+
+  @media screen and (max-width: 765px) {
+    width: 318px;
+    height: 279px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Styles pour l'overlay et les icônes au survol */
+  .overlay:hover .eye-icon,
+  .overlay:hover .fullscreen-icon {
+    display: block;
+  }
+}
+
+/* Styles pour l'overlay au survol de l'image */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.3s, background-color 0.3s;
+
+  /* Ajustements responsives au survol */
+  &:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Affichage des titres au survol */
+    h2,
+    h3 {
+      display: block;
+    }
+  }
+
+  /* Styles pour les titres dans l'overlay */
+  h2 {
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 454px;
+    color: white;
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      top: 227px;
+      font-size: 12px;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    position: absolute;
+    left: 488px;
+    top: 452px;
+    color: white;
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      left: 240px;
+      top: 237px;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+      left: 289px;
+    }
+  }
+
+  /* Styles pour l'icône de l'œil au survol */
+  .eye-icon {
+    width: 48px;
+    height: 33.2px;
+    top: 231.4px;
+    left: 255px;
+    position: absolute;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      top: 135px;
+      left: 140px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+      left: 175px;
+    }
+  }
+
+  /* Styles pour l'icône de plein écran au survol */
+  .fullscreen-icon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    top: 11px;
+    left: 512px;
+    border: 1px;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      top: 17px;
+      left: 267px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+      left: 317px;
+    }
+  }
+}

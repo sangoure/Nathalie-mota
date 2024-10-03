@@ -1,0 +1,125 @@
+/* Styles pour l'icône du menu burger */
+.burgerMenu {
+  margin-right: 20px;
+  width: 30px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  /* Styles pour les trois barres du menu burger */
+  .bar {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Styles pour l'état ouvert du menu burger */
+  &.open {
+    .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
+
+/* Media query pour les écrans avec une largeur maximale de 600px */
+@media screen and (max-width: 600px) {
+  /* Styles pour l'en-tête */
+  header {
+    padding-inline: 16px;
+
+    /* Styles pour l'état ouvert de l'en-tête */
+    &.open {
+      position: fixed;
+      background-color: #fff;
+      z-index: 2;
+      @include openNavAnimation;
+    }
+
+    /* Styles pour le conteneur de l'en-tête */
+    .header_container {
+      /* Styles pour l'icône du menu burger à l'intérieur du conteneur de l'en-tête */
+      .burgerMenu {
+        width: 30px;
+        height: 20px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        /* Styles pour les trois barres du menu burger */
+        .bar {
+          width: 100%;
+          height: 4px;
+          background-color: black;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        /* Styles pour l'état ouvert du menu burger */
+        &.open {
+          .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+
+          .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+          }
+        }
+      }
+
+      /* Styles pour le conteneur des liens de navigation */
+      .nav-links-container {
+        display: none !important;
+
+        /* Styles pour l'état ouvert du conteneur des liens de navigation */
+        &.open {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          top: 75px;
+          left: 0;
+          right: 0;
+          background-color: #e00000;
+          width: 100vw;
+          height: calc(100vh - 75px);
+        }
+
+        /* Styles pour le menu de l'en-tête à l'intérieur du conteneur des liens de navigation */
+        .header-menu {
+          flex-direction: column;
+          gap: 46px;
+          
+
+          justify-content: center;
+          align-items: center;
+          padding-inline: 0;
+
+          /* Styles pour les éléments de liste à l'intérieur du menu de l'en-tête */
+          li {
+            font: {
+              size: 45px !important;
+            }
+
+            /* Styles pour les balises d'ancrage à l'intérieur des éléments de liste */
+            a {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

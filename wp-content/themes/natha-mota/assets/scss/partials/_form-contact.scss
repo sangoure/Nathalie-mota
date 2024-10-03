@@ -1,0 +1,52 @@
+div#wpcf7-f31-o1 {
+  height: 83%;
+}
+
+/* Styles pour le formulaire de contact */
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+/* Styles pour les champs de saisie personnalisés */
+.custom-input-class,
+.custom-textarea-class {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #b8bbc2;
+  resize: none;
+}
+
+/* Styles spécifiques pour le champ de saisie */
+.custom-input-class {
+  height: 37px;
+}
+
+/* Styles spécifiques pour la zone de texte */
+.custom-textarea-class {
+  height: 180px;
+}
+
+/* Styles pour l'étiquette personnalisée */
+.custom-label {
+  font-size: 12px;
+  font-family: "PoppinsMedium";
+  font-weight: bolder;
+  line-height: 18px;
+}
+
+/* Styles pour le bouton de soumission personnalisé */
+.customsubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d8d8d8;
+  height: 50px;
+  width: 275px;
+  border: 1px solid #b8bbc2;
+}

@@ -1,0 +1,46 @@
+/* Styles de l'overlay de la fenêtre modale */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 3, 0.8);
+  display: none; /* Initialement masqué, sera affiché par JavaScript pour afficher la fenêtre modale */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  &.open {
+    display: flex;
+  }
+}
+
+
+/* Styles de la fenêtre modale elle-même */
+.popup-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 512px;
+  border: 2px solid black;
+  background: white;
+  padding: 8px 40px 40px 40px;
+  height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+ padding-top: 50px;
+ 
+}
+.popup-contact img {
+  max-width: 100%;
+  
+}
+/* Media query pour les écrans de petite taille */
+@media screen and (max-width: 465px) {
+  .popup-contact {
+    max-width: 270px;
+  
+  }
+}

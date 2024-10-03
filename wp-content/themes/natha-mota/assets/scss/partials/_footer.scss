@@ -1,0 +1,61 @@
+/* Styles pour le footer */
+footer {
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  font-size: 16px;
+  font-family: "space_monoregular", monospace;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+/* Styles pour le menu du footer */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles pour la liste du menu du footer */
+.footer-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles pour les éléments de la liste du menu du footer */
+.footer-menu li {
+  padding: 0 40px;
+}
+
+/* Styles pour les liens dans les éléments de la liste du menu du footer */
+.footer-menu li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* Media query pour les écrans avec une largeur maximale de 375px */
+@media screen and (max-width: 375px) {
+  /* Styles spécifiques pour la liste du menu du footer lorsque la largeur de l'écran est inférieure ou égale à 375px */
+  .footer-menu {
+    flex-direction: column; /* Change la direction en colonne */
+    align-items: center; /* Centre les éléments */
+  }
+
+  /* Ajuste l'ordre des éléments pour les placer sous la bordure supérieure */
+  .footer-menu li {
+    order: 1;
+    margin-top: 30px;
+  }
+
+  /* Ajuste l'espacement entre les éléments de la liste */
+  .footer-menu li:not(:first-child) {
+    margin-top: 10px;
+  }
+}
